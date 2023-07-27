@@ -118,7 +118,7 @@ export default function Form(props) {
             <button type="button" className="btn btn-primary btn-lg mx-2" onClick={handleAlternateClick}>aLtErNaTiNg cAsE</button>
             <button type="button" className="btn btn-primary btn-lg" onClick={handleInverseClick}>InVeRsE CaSe</button>
             <button type="button" className="btn btn-primary btn-lg mx-2" onClick={handleClearClick}>Clear Text</button>
-            <a class="btn btn-primary btn-lg " href="https://bmc.link/olifarhaan" role="button">Buy Me Coffee</a>
+            <a className="btn btn-primary btn-lg " href="https://bmc.link/olifarhaan" role="button">Buy Me Coffee</a>
             <div className="card my-2">
                 <div className="card-body">
                     <b>{findWords()}</b> words, <b>{text.length}</b> characters, <b>{(findWords() * 0.008).toFixed(2)}</b> min reading time
