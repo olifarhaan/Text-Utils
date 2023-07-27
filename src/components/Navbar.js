@@ -19,19 +19,16 @@ export default function Navbar(props) {
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
+                                Other Softwares
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="/">Software Development</a></li>
-                                <li><a className="dropdown-item" href="/">Web Development</a></li>
-                                <li><a className="dropdown-item" href="/">Graphics Designing</a></li>
+                                <li><a className="dropdown-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7080300284052160514/">Bank Management System</a></li>
+                                <li><a className="dropdown-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7080297578046570497/">Task Management System</a></li>
+                                <li><a className="dropdown-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7080299056064806912/">Employee Management System</a></li>
+                                <li><a className="dropdown-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7080644284474867713/">Internet Download Manager</a></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="/">Not Sure? Contact Us</a></li>
+                                <li><a className="dropdown-item" href="mailto:olifarhaan@protonmail.com">Not Sure? Contact Us</a></li>
                             </ul>
-                        </li>
-
-                        <li className="nav-item">
-                            <a className="nav-link" href="/">More Softwares</a>
                         </li>
                     </ul>
 

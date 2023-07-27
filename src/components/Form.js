@@ -27,6 +27,41 @@ export default function Form(props) {
         let newText = arr.join(" ");
         setText(newText);
     }
+    const handleAlternateClick = () => {
+        const arr = text.split(" ");
+        let newText = ""
+        for (let i = 0; i < arr.length; i++) {
+            let word = "";
+            for (let j = 0; j < arr[i].length; j++) {
+                if ((j & 1) === 0) word += arr[i][j].toLowerCase();
+                else word += arr[i][j].toUpperCase();
+            }
+            if (i === arr.length - 1) newText += word;
+            else newText += word + " ";
+        }
+        setText(newText);
+    }
+    const handleInverseClick = () => {
+        const arr = text.split(" ");
+        let newText = ""
+        for (let i = 0; i < arr.length; i++) {
+            let word = "";
+            for (let j = 0; j < arr[i].length; j++) {
+                if ((j & 1) === 1) word += arr[i].charAt(j).toLowerCase();
+                else word += arr[i].charAt(j).toUpperCase();
+            }
+            if (i === arr.length - 1) newText += word;
+            else newText += word + " ";
+        }
+        setText(newText);
+    }
+
+
+    const handleClearClick = () => {
+        setText("");
+        console.log("Clear Clicked");
+    }
+
     const findWords = () => {
         let arr = text.trim().split(" ");
         let wordCount = arr.length;
@@ -77,9 +112,13 @@ export default function Form(props) {
             <div className="mb-2">
                 <textarea className="form-control" id="text" placeholder='Enter the text here' value={text} onChange={onChangeTextHandle} rows="8"></textarea>
             </div>
-            <button type="button" className="btn btn-primary btn-lg" onClick={handleUpClick}>UpperCase</button>
-            <button type="button" className="btn btn-primary btn-lg m-2" onClick={handleLowClick}>LowerCase</button>
-            <button type="button" className="btn btn-primary btn-lg" onClick={handleCapClick}>Capitalize</button>
+            <button type="button" className="btn btn-primary btn-lg" onClick={handleUpClick}>UPPER CASE</button>
+            <button type="button" className="btn btn-primary btn-lg mx-2" onClick={handleLowClick}>lower case</button>
+            <button type="button" className="btn btn-primary btn-lg" onClick={handleCapClick}>Capitalize Case</button>
+            <button type="button" className="btn btn-primary btn-lg mx-2" onClick={handleAlternateClick}>aLtErNaTiNg cAsE</button>
+            <button type="button" className="btn btn-primary btn-lg" onClick={handleInverseClick}>InVeRsE CaSe</button>
+            <button type="button" className="btn btn-primary btn-lg mx-2" onClick={handleClearClick}>Clear Text</button>
+            <a class="btn btn-primary btn-lg " href="https://bmc.link/olifarhaan" role="button">Buy Me Coffee</a>
             <div className="card my-2">
                 <div className="card-body">
                     <b>{findWords()}</b> words, <b>{text.length}</b> characters, <b>{(findWords() * 0.008).toFixed(2)}</b> min reading time

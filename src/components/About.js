@@ -5,67 +5,52 @@ export default function About() {
         color: 'black',
         backgroundColor: 'white',
     })
-
-    const [mode, setMode] = useState("Enable Dark Mode")
-    const toggleMode = () => {
-        if (myStyle.backgroundColor === 'black') {
-            setMyStyle({
-                color: 'black',
-                backgroundColor: 'white',
-            })
-            setMode("Enable Dark Mode")
-        }
-        else if (myStyle.backgroundColor === 'white') {
-            setMyStyle({
-                color: 'white',
-                backgroundColor: 'black'
-            })
-            setMode("Enable Light Mode")
-        }
-    }
     return (
         <>
-            <div className="container" style={myStyle}>
+            <div className="container my-5" style={myStyle}>
                 <h2> Few Words About Us</h2>
                 <div className="accordion" id="accordionExample" style={myStyle}>
                     <div className="accordion-item" style={myStyle}>
                         <h2 className="accordion-header" style={myStyle}>
                             <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Accordion Item #1
+                                Our Vision
                             </button>
                         </h2>
                         <div id="collapseOne" className="accordion-collapse collapse show" style={myStyle} data-bs-parent="#accordionExample">
                             <div className="accordion-body" style={myStyle}>
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                At Text Utils, our vision is to empower users with a versatile and efficient text manipulation tool that simplifies the process of converting text while maintaining utmost accuracy and ease of use. We envision a world where individuals, students, professionals, and writers can effortlessly transform their texts into various formats, thereby enhancing their productivity and enabling seamless communication across platforms. Our aim is to become the go-to application for all text conversion needs, setting new standards for user convenience and reliability.
                             </div>
                         </div>
                     </div>
                     <div className="accordion-item" style={myStyle}>
                         <h2 className="accordion-header" style={myStyle}>
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Accordion Item #2
+                                Our Mission
                             </button>
                         </h2>
                         <div id="collapseTwo" className="accordion-collapse collapse" style={myStyle} data-bs-parent="#accordionExample">
                             <div className="accordion-body" style={myStyle}>
-                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                Our mission at Text Utils is to provide a comprehensive and user-friendly platform that offers a diverse range of text conversion functionalities. We are committed to delivering exceptional results through cutting-edge technology and innovative algorithms, ensuring that users can swiftly convert text to uppercase, lowercase, capitalize text, and even invert text with just a few clicks. Our relentless focus on user feedback and continuous improvement drives us to stay ahead of the curve and consistently enhance our app's capabilities.
                             </div>
                         </div>
                     </div>
                     <div className="accordion-item" style={myStyle}>
                         <h2 className="accordion-header" style={myStyle}>
                             <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Accordion Item #3
+                                Our Objectives
                             </button>
                         </h2>
                         <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <strong>User-Centric Experience:</strong> Our primary objective is to prioritize user satisfaction by designing an intuitive and straightforward interface that ensures a seamless experience for users of all backgrounds and expertise levels. We aim to provide a clutter-free and responsive app that focuses on the core functionalities of text conversion.
+                                <br />
+                                <strong>Accuracy and Reliability:</strong> We are committed to maintaining the highest level of accuracy in text conversion processes. Our objective is to develop robust algorithms that deliver precise results, allowing users to trust Text ConvertMaster for error-free conversions.
+                                <br />
+                                <strong>Expand Functionality:</strong> As part of our future objectives, we plan to continually expand the range of text conversion features offered by the app. This includes exploring additional transformation options such as leetspeak, ROT13, and more, catering to a broader audience with diverse text manipulation needs.
                             </div>
                         </div>
                     </div>
                 </div>
-                <button className="btn-primary" onClick={() => toggleMode()}>{mode}</button>
             </div>
         </>
     )
