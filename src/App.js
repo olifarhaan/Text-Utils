@@ -4,6 +4,8 @@ import Form from './components/Form';
 import About from './components/About';
 import 'bootstrap/dist/css/bootstrap.css'
 import React, { useState } from 'react'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
   const toggleMode = () => {

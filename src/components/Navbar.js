@@ -29,8 +29,9 @@ export default function Navbar(props) {
                                 <li><a className="dropdown-item" href="/">Not Sure? Contact Us</a></li>
                             </ul>
                         </li>
+
                         <li className="nav-item">
-                            <a className="nav-link disabled">Disabled</a>
+                            <a className="nav-link" href="/">More Softwares</a>
                         </li>
                     </ul>
 
